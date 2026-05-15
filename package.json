@@ -1,7 +1,7 @@
 {
-    "name": "express-boilerplate",
+    "name": "game-codex-api",
     "version": "1.0.0",
-    "description": "Production-ready Node.js API boilerplate with Express and TypeScript, focused on scalability and clean architecture.",
+    "description": "REST API focused on game discovery and search, featuring filtering by genres, platforms, studios, classifications and release dates.",
     "main": "index.js",
     "scripts": {
         "start:dev": "tsx watch --env-file=.env src/server.ts",
@@ -14,13 +14,15 @@
         "nodejs",
         "express",
         "typescript",
-        "api",
-        "rest",
-        "boilerplate",
-        "template",
+        "prisma",
+        "postgresql",
+        "zod",
+        "rest-api",
+        "games",
+        "game-library",
         "backend",
-        "clean-architecture",
-        "project-structure"
+        "portfolio",
+        "clean-architecture"
     ],
     "author": "João Vitor B. S. - DevJoaoVitorB",
     "license": "ISC",

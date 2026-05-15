@@ -7,3 +7,101 @@ datasource db {
   provider = "postgresql"
 }
 
+enum Classification {
+  L
+  TEN
+  TWELVE
+  FOURTEEN
+  SIXTEEN
+  EIGHTEEN
+}
+
+enum PlatformType {
+  PC
+  CONSOLE
+  MOBILE
+}
+
+enum Continent {
+  AFRICA
+  EUROPE
+  ASIA
+  OCEANIA
+  ANTARCTICA
+  NORTH_AMERICA
+  SOUTH_AMERICA
+}
+
+model Game {
+  id              Int             @id @default(autoincrement())
+  name            String          @db.VarChar(120)
+  slug            String          @unique @db.VarChar(50)
+  description     String
+  classification  Classification
+  releaseDate     DateTime        @db.Date
+  specs           Json?
+
+  studioId        Int
+  studio          GameStudio      @relation(fields: [studioId], references: [id])
+
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  platforms       Platform[]
+  genres          Genre[]
+
+  @@map("games")
+  @@index([releaseDate, classification, studioId])
+}
+
+model GameStudio {
+  id              Int             @id @default(autoincrement())
+  name            String          @unique @db.VarChar(150)
+  website         String?         @unique @db.VarChar(255)
+  foundedYear     Int
+
+  countryId       Int
+  country         Country         @relation(fields: [countryId], references: [id])
+
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  games           Game[]
+
+  @@map("studios")
+  @@index([countryId])
+}
+
+model Platform {
+  id              Int             @id @default(autoincrement())
+  name            String          @unique @db.VarChar(100)
+  slug            String          @unique @db.VarChar(50)
+  type            PlatformType
+
+  games           Game[]
+
+  @@map("platforms")
+  @@index([type])
+}
+
+model Genre {
+  id              Int             @id @default(autoincrement())
+  name            String          @unique @db.VarChar(50)
+  slug            String          @unique @db.VarChar(50)
+
+  games           Game[]
+
+  @@map("genres")
+}
+
+model Country {
+  id              Int             @id @default(autoincrement())
+  name            String          @unique @db.VarChar(255)
+  code            String          @unique @db.Char(2)
+  continent       Continent
+
+  studios         GameStudio[]
+
+  @@map("countries")
+  @@index([continent])
+}
