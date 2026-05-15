@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        // Language and Environment Settings
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "target": "ES2023",
+        "lib": ["ESNext"],
+        "types": ["node"],
+
+        // Paths
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@prisma-client": ["./src/generated/prisma/client"]
+        },
+
+        // Strictness
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+
+        // Interop and Build
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+
+        // DX - Developer Experience
+        "sourceMap": true,
+        "removeComments": true
+    },
+    "include": ["src", "src/lib"],
+    "exclude": ["node_modules", "dist"]
+}

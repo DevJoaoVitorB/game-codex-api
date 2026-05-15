@@ -1,0 +1,45 @@
+{
+    "name": "express-boilerplate",
+    "version": "1.0.0",
+    "description": "Production-ready Node.js API boilerplate with Express and TypeScript, focused on scalability and clean architecture.",
+    "main": "index.js",
+    "scripts": {
+        "start:dev": "tsx watch --env-file=.env src/server.ts",
+        "build": "tsc",
+        "start:build": "node dist/server.js",
+        "prisma:init": "npx prisma migrate dev --name init && npx prisma generate",
+        "prisma:studio": "prisma studio"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "typescript",
+        "api",
+        "rest",
+        "boilerplate",
+        "template",
+        "backend",
+        "clean-architecture",
+        "project-structure"
+    ],
+    "author": "João Vitor B. S. - DevJoaoVitorB",
+    "license": "ISC",
+    "type": "module",
+    "devDependencies": {
+        "@types/express": "^5.0.6",
+        "@types/node": "^25.6.0",
+        "@types/pg": "^8.20.0",
+        "prisma": "^7.8.0",
+        "tsx": "^4.21.0",
+        "typescript": "^6.0.3"
+    },
+    "dependencies": {
+        "@prisma/adapter-pg": "^7.8.0",
+        "@prisma/client": "^7.8.0",
+        "cors": "^2.8.6",
+        "dotenv": "^17.4.2",
+        "express": "^5.2.1",
+        "pg": "^8.20.0",
+        "zod": "^4.3.6"
+    }
+}
