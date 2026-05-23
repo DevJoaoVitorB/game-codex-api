@@ -18,7 +18,6 @@
         // Strictness
         "strict": true,
         "noUncheckedIndexedAccess": true,
-        "exactOptionalPropertyTypes": true,
 
         // Interop and Build
         "esModuleInterop": true,
