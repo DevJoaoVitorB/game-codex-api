@@ -1,4 +1,6 @@
 import express, { Request, Response } from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
 import {
     loggerMiddleware,
     notFoundMiddleware,
@@ -9,6 +11,13 @@ import { countryRoutes } from '@/routes';
 export const createApp = () => {
     const app = express();
 
+    app.use(helmet());
+    app.use(
+        cors({
+            origin: '*',
+            credentials: true,
+        }),
+    );
     app.use(express.json());
     app.use(loggerMiddleware);
 
