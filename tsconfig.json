@@ -8,10 +8,11 @@
         "types": ["node"],
 
         // Paths
-        "rootDir": "./src",
+        "rootDir": ".",
         "outDir": "./dist",
         "paths": {
             "@/*": ["./src/*"],
+            "@prisma/*": ["./prisma/*"],
             "@prisma-client": ["./src/generated/prisma/client"]
         },
 
@@ -30,6 +31,6 @@
         "sourceMap": true,
         "removeComments": true
     },
-    "include": ["src", "src/lib"],
+    "include": ["src", "src/lib", "prisma"],
     "exclude": ["node_modules", "dist"]
 }

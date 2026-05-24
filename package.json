@@ -8,7 +8,11 @@
         "build": "tsc",
         "start:build": "node dist/server.js",
         "prisma:init": "npx prisma migrate dev --name init && npx prisma generate",
-        "prisma:studio": "prisma studio"
+        "prisma:studio": "prisma studio",
+        "prisma:seed": "tsx prisma/seed.ts"
+    },
+    "prisma": {
+        "seed": "tsx prisma/seed.ts"
     },
     "keywords": [
         "nodejs",
