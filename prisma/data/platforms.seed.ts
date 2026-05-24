@@ -2,7 +2,7 @@ import { PlatformDTO } from '@/modules/platform';
 
 export const platforms: Omit<PlatformDTO, 'id'>[] = [
     // PC
-    { name: 'PC', slug: 'pc', type: 'PC' },
+    { name: 'Windows', slug: 'pc', type: 'PC' },
     { name: 'Linux', slug: 'linux', type: 'PC' },
     { name: 'macOS', slug: 'macos', type: 'PC' },
 
