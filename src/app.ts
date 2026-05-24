@@ -6,7 +6,7 @@ import {
     notFoundMiddleware,
     errorHandlerMiddleware,
 } from '@/middlewares';
-import { countryRoutes } from '@/routes';
+import { countryRoutes, genreRoutes, platformRoutes } from '@/routes';
 
 export const createApp = () => {
     const app = express();
@@ -26,6 +26,8 @@ export const createApp = () => {
     });
 
     app.use('/countries', countryRoutes);
+    app.use('/genres', genreRoutes);
+    app.use('/platforms', platformRoutes);
 
     app.use(notFoundMiddleware);
     app.use(errorHandlerMiddleware);
