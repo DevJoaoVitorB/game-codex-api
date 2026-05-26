@@ -115,7 +115,8 @@ O objetivo da **Game Codex API** é demonstrar a construção de uma **API backe
 - Validações de payloads com Zod
 - Persistência de dados com PostgreSQL
 - ORM com Prisma
+- Documentação Swagger
 
 ### 🚀 Tecnologias Utilizadas
 
-![Tecnologias](https://skillicons.dev/icons?i=ts,nodejs,express,prisma,postgresql,zod)
+![Tecnologias](https://skillicons.dev/icons?i=ts,nodejs,express,prisma,postgresql,swagger,zod)
