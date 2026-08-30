@@ -7,7 +7,7 @@ import {
     notFoundMiddleware,
     errorHandlerMiddleware,
 } from '@/middlewares';
-import { countryRoutes, gameStudioRoutes, genreRoutes, platformRoutes } from '@/routes';
+import { countryRoutes, gameRoutes, gameStudioRoutes, genreRoutes, platformRoutes } from '@/routes';
 import { swaggerSpec } from '@/docs/swagger';
 
 export const createApp = () => {
@@ -33,6 +33,7 @@ export const createApp = () => {
     app.use('/genres', genreRoutes);
     app.use('/platforms', platformRoutes);
     app.use('/studios', gameStudioRoutes);
+    app.use('/games', gameRoutes);
 
     app.use(notFoundMiddleware);
     app.use(errorHandlerMiddleware);
