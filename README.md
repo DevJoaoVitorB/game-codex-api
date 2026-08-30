@@ -52,16 +52,6 @@ Antes de começar, certifique-se de ter instalado:
 
 <br>
 
-### 📚 Documentação da API
-
-A documentação completa da API está disponível no **Swagger UI**:
-
-```
-http://localhost:3000/swagger
-```
-
-<br>
-
 ### 🔎 Exemplos de Pesquisa
 
 #### Buscar jogos por nome:
@@ -376,6 +366,16 @@ npm run start:build
 ```
 
 O servidor estará disponível em `http://localhost:3000`
+
+<br>
+
+### 📚 Documentação da API
+
+A documentação completa da API está disponível no **Swagger UI**:
+
+```
+http://localhost:3000/swagger
+```
 
 <br>
 
