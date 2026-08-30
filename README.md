@@ -18,6 +18,8 @@ O objetivo da **Game Codex API** é demonstrar a construção de uma **API backe
 - ORM com Prisma
 - Documentação Swagger
 
+<br>
+
 ### ⚙️ Funcionalidades
 
 Além das funcionalidades de `CRUD` básicas para jogos e estudios de desenvolvimento, A API possui recursos de pesquisa e descoberta de jogos por:
